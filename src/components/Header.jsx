@@ -6,6 +6,7 @@ import {
   NavDropdown,
   Button,
 } from "react-bootstrap";
+import { FaFacebookF } from 'react-icons/fa';
 
 function Header() {
   const [showAdmission, setShowAdmission] = useState(false);
@@ -29,82 +30,78 @@ function Header() {
       >
         {/* Logo on the left */}
         <div className="d-flex align-items-center">
-          <a href="https://www.roxburylatin.org/" className="me-4">
+          <a href="https://innobridgeinstitute.org/news-and-events" className="me-4">
             <img
-              src="https://upload.wikimedia.org/wikipedia/en/3/3e/Roxbury_Latin_School_Shield.png"
-              alt="Roxbury Latin School Logo"
-              style={{ height: "40px" }}
+              src="/aard_logo.png"
+              alt="ARRD Logo"
+              style={{ height: "70px" }}
             />
           </a>
         </div>
 
         {/* Navigation links, INQUIRE button, and icons grouped together on the right */}
-        <div className="d-flex align-items-center gap-3">
-          {/* Navigation links */}
-          <div className="d-flex gap-3">
+        <div className="d-flex align-items-center gap-3" >
+          <div className="d-flex gap-3" style={{ fontSize: "18px" }}>
             <a 
-              href="https://roxburylatin.myschoolapp.com/app#login" 
+              href="https://innobridgeinstitute.org/news-and-events" 
               className="text-decoration-none"
-              style={{ color: "#666" }}
+              style={{ color: "#000000" }}
+            >
+              Inquire
+            </a>
+            <span style={{ color: "#666" }}>|</span>
+            <a 
+              href="https://innobridgeinstitute.org/news-and-events" 
+              className="text-decoration-none"
+              style={{ color: "#050505ff" }}
             >
               Parents
             </a>
+            <span style={{ color: "#666" }}>|</span>
             <a 
-              href="https://roxburylatin.myschoolapp.com/app#login" 
+              href="https://innobridgeinstitute.org/news-and-events" 
               className="text-decoration-none"
-              style={{ color: "#666" }}
+              style={{ color: "#050505ff" }}
             >
-              RL Login
+              Students
             </a>
+            <span style={{ color: "#666" }}>|</span>
             <a 
-              href="https://www.roxburylatin.org/alumni/" 
+              href="https://innobridgeinstitute.org/news-and-events" 
               className="text-decoration-none"
-              style={{ color: "#666" }}
+              style={{ color: "#050505ff" }}
             >
               Alumni
             </a>
+            <span style={{ color: "#666" }}>|</span>
             <a 
-              href="https://www.roxburylatin.org/about/calendar/" 
+              href="https://innobridgeinstitute.org/news-and-events" 
               className="text-decoration-none"
-              style={{ color: "#666" }}
+              style={{ color: "#050505ff" }}
             >
-              Calendar
+              Advisors
             </a>
+            <span style={{ color: "#666" }}>|</span>
+            <a 
+              href="https://innobridgeinstitute.org/news-and-events" 
+              className="text-decoration-none"
+              style={{ color: "#050505ff" }}
+            >
+              Admin
+            </a>
+              <span style={{ color: "#666" }}>|</span>
           </div>
 
           {/* INQUIRE button and icons */}
           <div className="d-flex flex-column align-items-end">
-            <Button 
-              variant="danger" 
-              size="sm"
-              className="mb-1"
-              style={{ 
-                backgroundColor: "#8B1C1C", 
-                borderColor: "#8B1C1C",
-                fontWeight: "600",
-                fontSize: "12px",
-                padding: "6px 16px"
-              }}
-            >
-              INQUIRE
-            </Button>
-            
+
             {/* Social Media and Utility Icons */}
             <div className="d-flex gap-2">
               <a href="#" className="text-decoration-none" style={{ color: "#666" }}>
                 🔍
               </a>
-              <a href="https://www.facebook.com/RoxburyLatin/" className="text-decoration-none" style={{ color: "#666" }}>
-                📘
-              </a>
-              <a href="https://www.instagram.com/roxburylatin/" className="text-decoration-none" style={{ color: "#666" }}>
-                📷
-              </a>
-              <a href="https://www.flickr.com/photos/roxburylatin/" className="text-decoration-none" style={{ color: "#666" }}>
-                📸
-              </a>
-              <a href="https://www.youtube.com/user/roxburylatintube" className="text-decoration-none" style={{ color: "#666" }}>
-                📺
+              <a href="https://www.youtube.com" className="text-decoration-none" style={{ color: "#666", border: "1px solid #666", borderRadius: "3px", padding: "2px 4px" }}>
+                ▶
               </a>
             </div>
           </div>
@@ -124,7 +121,7 @@ function Header() {
             
             {/* About Dropdown */}
             <NavDropdown
-              title="About"
+              title="ABOUT"
               id="about-dropdown"
               show={showAbout}
               onMouseEnter={() => setShowAbout(true)}
@@ -141,7 +138,7 @@ function Header() {
 
             {/* Admission Dropdown */}
             <NavDropdown
-              title="Admission"
+              title="ADMISSION"
               id="admission-dropdown"
               show={showAdmission}
               onMouseEnter={() => setShowAdmission(true)}
@@ -161,7 +158,7 @@ function Header() {
 
             {/* Academics Dropdown */}
             <NavDropdown
-              title="Academics"
+              title="ACADEMICS"
               id="academics-dropdown"
               show={showAcademics}
               onMouseEnter={() => setShowAcademics(true)}
@@ -174,9 +171,23 @@ function Header() {
               <NavDropdown.Item href="https://www.roxburylatin.org/academics/college-counseling/">College Counseling</NavDropdown.Item>
             </NavDropdown>
 
-            {/* Arts Dropdown */}
             <NavDropdown
-              title="Arts"
+              title="R & D"
+              id="arts-dropdown"
+              show={showArts}
+              onMouseEnter={() => setShowArts(true)}
+              onMouseLeave={() => setShowArts(false)}
+              className="me-3"
+            >
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
+            </NavDropdown>
+   
+
+            <NavDropdown
+              title="TESTIMONIALS"
               id="arts-dropdown"
               show={showArts}
               onMouseEnter={() => setShowArts(true)}
@@ -189,50 +200,32 @@ function Header() {
               <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
             </NavDropdown>
 
-            {/* Athletics Dropdown */}
             <NavDropdown
-              title="Athletics"
-              id="athletics-dropdown"
-              show={showAthletics}
-              onMouseEnter={() => setShowAthletics(true)}
-              onMouseLeave={() => setShowAthletics(false)}
+              title="SUPPORTING"
+              id="arts-dropdown"
+              show={showArts}
+              onMouseEnter={() => setShowArts(true)}
+              onMouseLeave={() => setShowArts(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/athletics/">Athletics Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/athletics/teams/">Team Pages</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/athletics/staff/">Athletics Staff</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/athletics/calendar/">Full Calendar</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/athletics/recent/">Game Results</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.islsports.org/">ISL Website</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
             </NavDropdown>
 
-            {/* Student Life Dropdown */}
             <NavDropdown
-              title="Student Life"
-              id="student-life-dropdown"
-              show={showStudentLife}
-              onMouseEnter={() => setShowStudentLife(true)}
-              onMouseLeave={() => setShowStudentLife(false)}
+              title="NEWS"
+              id="arts-dropdown"
+              show={showArts}
+              onMouseEnter={() => setShowArts(true)}
+              onMouseLeave={() => setShowArts(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/student-life/">Student Life Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/student-life/clubs/">Clubs & Activities</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/student-life/traditions/">Traditions</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/student-life/community-service/">Community Service</NavDropdown.Item>
-            </NavDropdown>
-
-            {/* Supporting RL Dropdown */}
-            <NavDropdown
-              title="Supporting RL"
-              id="supporting-rl-dropdown"
-              show={showSupportingRL}
-              onMouseEnter={() => setShowSupportingRL(true)}
-              onMouseLeave={() => setShowSupportingRL(false)}
-            >
-              <NavDropdown.Item href="https://www.givecampus.com/campaigns/15168/donations/new">Make A Gift</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/supporting-rl/annual-fund/">Annual Fund</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/supporting-rl/planned-giving/">Planned Giving</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/supporting-rl/volunteer/">Volunteer</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
+              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
             </NavDropdown>
 
           </Nav>

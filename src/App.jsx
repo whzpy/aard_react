@@ -32,22 +32,19 @@ function App() {
             maxWidth: "400px",
           }}
         >
+              <h2 className="text-danger"> InnoBridge Team</h2>
           <p>
-            Here scholarly striving is celebrated, a boy’s character formation is
-            paramount, and an intentionally intimate community helps to ensure
-            the forging of sustaining relationships among the boys and between
-            boys and teachers.
+           Our advisors, staff, and alumni all come from strong backgrounds in academia and higher learning, with extensive research experience in many different fields. Located in Cambridge, the Hub of MIT and Harvard, our advisors incorporate hybrid teaching to guide students with their learning.
+            Nobel Prize winners (mentors to faculty team) 3 years experiences from MIT scientists & Harvard Postdocs (advisors) Alumni as RA ( solidly support students in projects)
           </p>
         </div>
       </div>
 
       {/* Welcome Section */}
       <Container className="my-5">
-        <h2 className="text-danger">Welcome to Roxbury Latin</h2>
+        <h2 className="text-danger">Our Mission</h2>
         <p className="mt-3">
-          Thank you for your interest in The Roxbury Latin School. Each year, we
-          seek to admit boys who will thrive in a challenging, rewarding, and
-          supportive environment that emphasizes character development, academic
+         Innobridge Institute seeks to bridge the gaps within the world of academia by encouraging our students to venture beyond the school curriculum and develop solutions to real-world problems through research and higher learning. Our mission is to inspire students to create their own vision for the world, keep an open mind, and develop strong leadership skills, so that their vision can become reality.
 
         </p>
       </Container>
