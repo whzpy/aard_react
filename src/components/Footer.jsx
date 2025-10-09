@@ -12,15 +12,15 @@ function Footer() {
           <Col lg={6} className="mb-4">
             <div className="mb-4">
               <img
-                src="https://upload.wikimedia.org/wikipedia/en/3/3e/Roxbury_Latin_School_Shield.png"
-                alt="Roxbury Latin School Logo"
+                src="https://upload.wikimedia.org/wikipedia/en/3/3e/RRD_Shield.png"
+                alt="RRD Logo"
                 style={{ height: "80px" }}
               />
             </div>
             
             <div className="mb-4">
               <div style={{ fontSize: "18px", fontWeight: "500" }}>101 Saint Theresa Avenue</div>
-              <div style={{ fontSize: "18px", fontWeight: "500" }}>West Roxbury, MA 02132</div>
+              <div style={{ fontSize: "18px", fontWeight: "500" }}>West RRD, MA 02132</div>
               <div style={{ fontSize: "18px", fontWeight: "500" }}>617.325.4920</div>
             </div>
 
@@ -55,16 +55,16 @@ function Footer() {
 
             {/* Social Media Icons */}
             <div className="d-flex gap-3">
-              <a href="https://www.facebook.com/RoxburyLatin/" className="text-white fs-4">
+              <a href="https://www.facebook.com/RRDLatin/" className="text-white fs-4">
                 📘
               </a>
-              <a href="https://www.instagram.com/roxburylatin/" className="text-white fs-4">
+              <a href="https://www.instagram.com/rrdlatin/" className="text-white fs-4">
                 📷
               </a>
-              <a href="https://www.flickr.com/photos/roxburylatin/" className="text-white fs-4">
+              <a href="https://www.flickr.com/photos/rrdlatin/" className="text-white fs-4">
                 📸
               </a>
-              <a href="https://www.youtube.com/user/roxburylatintube" className="text-white fs-4">
+              <a href="https://www.youtube.com/user/rrdlatintube" className="text-white fs-4">
                 📺
               </a>
             </div>
@@ -77,32 +77,32 @@ function Footer() {
               <Col md={6} className="mb-4">
                 <ul className="list-unstyled">
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/admission/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usadmission/" className="text-white text-decoration-none">
                       Admission & Financial Aid
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/admission/interactive-campus-tour/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usadmission/interactive-campus-tour/" className="text-white text-decoration-none">
                       Virtual Campus Tour
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/about/directory/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usabout/directory/" className="text-white text-decoration-none">
                       Office Directory
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/about/contact/directions/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usabout/contact/directions/" className="text-white text-decoration-none">
                       Directions
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/about/calendar/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usabout/calendar/" className="text-white text-decoration-none">
                       Calendar
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/facility-rental/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usfacility-rental/" className="text-white text-decoration-none">
                       Facility Rental
                     </a>
                   </li>
@@ -123,22 +123,22 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/alumni/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usalumni/" className="text-white text-decoration-none">
                       Alumni
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/athletics/recent/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usathletics/recent/" className="text-white text-decoration-none">
                       Scoreboard
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://sideline.bsnsports.com/schools/massachusetts/westroxbury/the-roxbury-latin-school" className="text-white text-decoration-none">
+                    <a href="https://sideline.bsnsports.com/schools/massachusetts/westrrd/the-rrd-latin-school" className="text-white text-decoration-none">
                       School Store
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/about/careers/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usabout/careers/" className="text-white text-decoration-none">
                       Career Opportunities
                     </a>
                   </li>
@@ -148,7 +148,7 @@ function Footer() {
                     </a>
                   </li>
                   <li className="mb-2">
-                    <a href="https://www.roxburylatin.org/privacy-policy/" className="text-white text-decoration-none">
+                    <a href="https://innobridgeinstitute.org/about-usprivacy-policy/" className="text-white text-decoration-none">
                       Privacy Policy
                     </a>
                   </li>
@@ -170,7 +170,7 @@ function Footer() {
         <Container>
           <Row className="align-items-center">
             <Col md={8}>
-              <small>&copy; 2025 The Roxbury Latin School</small>
+              <small>&copy; 2025 The RRD</small>
             </Col>
             <Col md={4} className="text-md-end">
               <small>

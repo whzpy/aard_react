@@ -6,7 +6,8 @@ import {
   NavDropdown,
   Button,
 } from "react-bootstrap";
-import { FaFacebookF } from 'react-icons/fa';
+import { FaFacebookF, FaSearch } from 'react-icons/fa';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function Header() {
   const [showAdmission, setShowAdmission] = useState(false);
@@ -97,11 +98,12 @@ function Header() {
 
             {/* Social Media and Utility Icons */}
             <div className="d-flex gap-2">
-              <a href="#" className="text-decoration-none" style={{ color: "#666" }}>
-                🔍
+              <a href="https://innobridgeinstitute.org/news-and-events" className="text-decoration-none" style={{ color: "#666" }}>
+                <FaSearch />
               </a>
+              
               <a href="https://www.youtube.com" className="text-decoration-none" style={{ color: "#666", border: "1px solid #666", borderRadius: "3px", padding: "2px 4px" }}>
-                ▶
+                <i className="bi bi-youtube"></i>
               </a>
             </div>
           </div>
@@ -128,12 +130,12 @@ function Header() {
               onMouseLeave={() => setShowAbout(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/about/mission/">Mission & History</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/about/leadership/">Leadership</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/about/faculty/">Faculty & Staff</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/about/directory/">Directory</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/about/contact/">Contact Us</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/about/careers/">Careers</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Mission & History</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Leadership</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Faculty & Staff</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Directory</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Contact Us</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Careers</NavDropdown.Item>
             </NavDropdown>
 
             {/* Admission Dropdown */}
@@ -145,15 +147,15 @@ function Header() {
               onMouseLeave={() => setShowAdmission(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/">Admission Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/events/">Admission Events</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/why-roxbury-latin/">Why Roxbury Latin?</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/applying/">Applying</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/tuition-financial-aid/">Tuition & Financial Aid</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/need-blind/">Need-blind Enrollment</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/faqs/">FAQs</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/team/">Admission Team</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/admission/interactive-campus-tour/">Interactive Campus Tour</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Admission Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Admission Events</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Why RRD Latin?</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Applying</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Tuition & Financial Aid</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Need-blind Enrollment</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">FAQs</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Admission Team</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Interactive Campus Tour</NavDropdown.Item>
             </NavDropdown>
 
             {/* Academics Dropdown */}
@@ -165,10 +167,10 @@ function Header() {
               onMouseLeave={() => setShowAcademics(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/academics/">Academic Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/academics/curriculum/">Curriculum</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/academics/departments/">Departments</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/academics/college-counseling/">College Counseling</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Academic Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Curriculum</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Departments</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">College Counseling</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -179,10 +181,10 @@ function Header() {
               onMouseLeave={() => setShowArts(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Arts Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Visual Arts</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Theater</NavDropdown.Item>
             </NavDropdown>
    
 
@@ -194,10 +196,10 @@ function Header() {
               onMouseLeave={() => setShowArts(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Arts Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Visual Arts</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Theater</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -208,10 +210,10 @@ function Header() {
               onMouseLeave={() => setShowArts(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Arts Overview</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Visual Arts</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Theater</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown
@@ -222,10 +224,9 @@ function Header() {
               onMouseLeave={() => setShowArts(false)}
               className="me-3"
             >
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/">Arts Overview</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/music/">Music</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/visual-arts/">Visual Arts</NavDropdown.Item>
-              <NavDropdown.Item href="https://www.roxburylatin.org/arts/theater/">Theater</NavDropdown.Item>
+               <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Music</NavDropdown.Item>
+              <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Visual Arts</NavDropdown.Item>
+               <NavDropdown.Item href="https://innobridgeinstitute.org/about-us">Theater</NavDropdown.Item>
             </NavDropdown>
 
           </Nav>

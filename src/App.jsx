@@ -15,7 +15,7 @@ function App() {
       <div
         style={{
           backgroundImage:
-            "url('https://www.roxburylatin.org/wp-content/uploads/2022/09/RL-Campus.jpg')",
+            "url('https://innobridgeinstitute.org/about-uswp-content/uploads/2022/09/RL-Campus.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "400px",
