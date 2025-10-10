@@ -11,17 +11,21 @@ const LanguageSelector = () => {
   // All languages with flags
   const languages = [
     { code: "us", label: "English" },
-    { code: "es", label: "Español" },
-    { code: "fr", label: "Français" },
-    { code: "pt", label: "Português" },
     { code: "cn", label: "中文" },
-    { code: "sa", label: "العربية" },
+    { code: "jp", label: "日本語" },
+    { code: "kr", label: "한국어" },
+    { code: "es", label: "Español" }
   ];
 
   return (
-    <footer className="border-top p-4 d-flex justify-content-end">
+    <div className="d-flex justify-content-end">
       <Dropdown>
-        <Dropdown.Toggle variant="light" id="language-dropdown">
+        <Dropdown.Toggle 
+          variant="light" 
+          size="sm" 
+          id="language-dropdown"
+          style={{ padding: "0.025rem 0.5rem", height: "auto",  backgroundColor: "#b7b7bcff", }}
+        >
           <img
             src={`https://flagcdn.com/w20/${language.code}.png`}
             alt={language.label}
@@ -46,7 +50,7 @@ const LanguageSelector = () => {
           ))}
         </Dropdown.Menu>
       </Dropdown>
-    </footer>
+    </div>
   );
 };
 
