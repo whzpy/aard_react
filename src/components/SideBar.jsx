@@ -6,7 +6,7 @@ function SideBar() {
       className="bg-white border-end shadow-sm p-3 sidebar d-none d-md-block"
       style={{
         width: "250px",
-        height: "calc(100vh - 40px)",
+        height: "calc(100vh - 50px)",
         //   overflowY: "auto",
         position: "fixed",
         top: "40px",
@@ -73,7 +73,6 @@ function SideBar() {
             scrollbarWidth: "thin",
             scrollbarColor: "#888 #f1f1f1",
             paddingRight: "12px",
-            // backgroundColor: "#ebf3edff",
           }}
         >
           <div className="mt-3 border border-danger rounded p-3 small">
@@ -100,7 +99,6 @@ function SideBar() {
               quantum sensors.
             </p>
           </div>
-
           <div className="mt-3 border border-danger rounded p-3 small">
             <h6 className="fw-bold text-dark">Nobel Prize: Chemist</h6>
             <p
@@ -124,7 +122,6 @@ function SideBar() {
               challenges we face.
             </p>
           </div>
-
           <div className="mt-3 border border-danger rounded p-3 small">
             <h6 className="fw-bold text-dark">Nobel Prize: Physiolo</h6>
             <p
@@ -147,7 +144,6 @@ function SideBar() {
               cancer and autoimmune diseases.
             </p>
           </div>
-
           <div className="mt-3 border border-danger rounded p-3 small">
             <h6 className="fw-bold text-dark">Nobel Prize: Literatu</h6>
             <p
@@ -171,7 +167,6 @@ function SideBar() {
               contemplative, finely calibrated tone.
             </p>
           </div>
-
           <div className="mt-3 border border-danger rounded p-3 small">
             <h6 className="fw-bold text-dark">Nobel Peace Prize</h6>
             <p
@@ -195,6 +190,9 @@ function SideBar() {
               the demand for free elections and representative government.
             </p>
           </div>
+          <div>
+            <p></p>
+          </div>
         </div>
       </div>
 
@@ -206,16 +204,23 @@ function SideBar() {
           left: "0",
           right: "0",
           padding: "1rem",
-          backgroundColor: "white",
           borderTop: "1px solid #dee2e6",
         }}
       >
-        <p className="mb-0 fw-semibold">
-          Massachusetts Institute of Technology
-        </p>
-        <p className="mb-0">77 Massachusetts Avenue, Cambridge, MA</p>
+        <h6
+          className="fw-bold text-uppercase mb-2"
+          style={{
+            color: "#0b18d6ff",
+            marginTop: "5px",
+          }}
+        >
+          Innobridge Institute
+        </h6>
+        <p className="mb-0">One Broadway, Cambridge, MA</p>
+        <p className="mb-0">Email: admission@innobridge.org</p>
+        <p className="mb-0">Phone: (617) 955-1908</p>
         <a href="#" className="text-decoration-none">
-          Visit | Map | Events
+          Visit | Map | Terms of Use
         </a>
       </footer>
     </aside>
