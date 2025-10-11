@@ -17,7 +17,7 @@ function Header() {
     >
       <div className="container d-flex align-items-left justify-content-center">
         {/* Logo */}
-        <a href="https://innobridgeinstitute.org/news-and-events" className="me-4">
+        <a href="https://innobridgeinstitute.org" className="me-4">
           <img
             src="/aard_logo.png"
             alt="ARRD Logo"
