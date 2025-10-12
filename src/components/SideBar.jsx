@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from "react-bootstrap"
 
 function SideBar() {
   return (
@@ -6,8 +7,7 @@ function SideBar() {
       className="bg-white border-end shadow-sm p-3 sidebar d-none d-md-block"
       style={{
         width: "250px",
-        height: "calc(100vh - 50px)",
-        //   overflowY: "auto",
+        height: "calc(100vh - 40px)",
         position: "fixed",
         top: "40px",
         left: "0",
@@ -15,6 +15,8 @@ function SideBar() {
       }}
     >
       <div style={{ paddingBottom: "120px" }}>
+        <div></div>
+
         <div className="mb-3">
           <h6 className="fw-bold text-uppercase mt-4 mb-2 text-muted">
             Search for ...
@@ -28,14 +30,9 @@ function SideBar() {
         </div>
 
         <h6 className="fw-bold text-uppercase mt-4 mb-2 text-muted">
-          Top resources
+          Registered Users
         </h6>
         <ul className="list-unstyled small">
-          <li>
-            <a href="#" className="text-decoration-none text-dark">
-              _ Inquire
-            </a>
-          </li>
           <li>
             <a href="#" className="text-decoration-none text-dark">
               _ Parents
@@ -69,7 +66,7 @@ function SideBar() {
         <div
           style={{
             overflowY: "scroll",
-            maxHeight: "400px",
+            maxHeight: "580px",
             scrollbarWidth: "thin",
             scrollbarColor: "#888 #f1f1f1",
             paddingRight: "12px",
@@ -205,6 +202,8 @@ function SideBar() {
           right: "0",
           padding: "1rem",
           borderTop: "1px solid #dee2e6",
+          backgroundColor: "white",
+          zIndex: "1000",
         }}
       >
         <h6
@@ -219,7 +218,10 @@ function SideBar() {
         <p className="mb-0">One Broadway, Cambridge, MA</p>
         <p className="mb-0">Email: admission@innobridge.org</p>
         <p className="mb-0">Phone: (617) 955-1908</p>
-        <a href="#" className="text-decoration-none">
+        <a
+          href="https://innobridgeinstitute.org/terms-of-service"
+          className="text-decoration-none"
+        >
           Visit | Map | Terms of Use
         </a>
       </footer>

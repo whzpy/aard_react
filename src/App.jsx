@@ -12,11 +12,14 @@ function App() {
       <div className="d-flex flex-grow-1" style={{ marginTop: "70px" }}>
         {/* Main Content */}
         <main
-          className="flex-grow-1 p-4 bg-light overflow-auto"
+          className="flex-grow-1 p-4 bg-light"
           style={{
-            marginLeft: "250px",
-            overflowY: "auto",
+            marginLeft: "200px",
+            overflowY: "scroll",
             height: "calc(100vh - 70px)",
+            width: "calc(100vw - 200px)",
+            scrollbarWidth: "auto",
+            scrollbarColor: "#888 #f1f1f1",
           }}
         >
           <div className="container">
@@ -110,6 +113,26 @@ function App() {
               of the Peace Prize. “I grew up after the end of the Cold War, when
               democracy seemed unstoppable and nuclear disarmament realistic,”
               Frydnes said when he presented the award.
+            </p>
+          </div>
+          <div
+            className="fw-bold mb-4"
+            style={{
+              backgroundColor: "#760e0eff",
+              bottom: "0",
+              left: "250px",
+              right: "0",
+              height: "50px",
+              textAlign: "center",
+              color: "white",
+              paddingTop: "10px",
+            }}
+          >
+            <p>
+              {" "}
+              Welcome to Innobridge Institute _ One Broadway, Cambridge, MA
+              02142 _ Email: info@innobridgeinstitute.org _ Phone: (617)
+              955-1908
             </p>
           </div>
         </main>
