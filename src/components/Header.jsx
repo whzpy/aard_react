@@ -17,7 +17,7 @@ function Header() {
     >
       <div className="container d-flex align-items-left justify-content-center">
         {/* Logo */}
-        <a href="https://innobridgeinstitute.org" className="me-4">
+        <a href="http://localhost:5173/" className="me-4">
           <img
             src="/aard_logo.png"
             alt="ARRD Logo"
@@ -65,10 +65,10 @@ function Header() {
             href="https://innobridgeinstitute.org/education"
             className="text-white text-decoration-none mx-3"
           >
-            ACADEMICS
+            EDUCATION
           </a>
           <a
-            href="https://innobridgeinstitute.org/about"
+            href="https://innobridgeinstitute.org"
             className="text-white text-decoration-none mx-3"
           >
             RESEARCH
