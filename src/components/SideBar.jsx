@@ -35,7 +35,7 @@ function SideBar() {
         <ul className="list-unstyled small">
           <li>
             <a
-              href="http://localhost:5173/parents"
+              href="http://localhost:5173/aard_react/parents"
               className="text-decoration-none text-dark"
             >
               _ Parents
@@ -43,7 +43,7 @@ function SideBar() {
           </li>
           <li>
             <a
-              href="http://localhost:5173/students"
+              href="http://localhost:5173/aard_react/students"
               className="text-decoration-none text-dark"
             >
               _ Students
@@ -51,7 +51,7 @@ function SideBar() {
           </li>
           <li>
             <a
-              href="http://localhost:5173/alumni"
+              href="http://localhost:5173/aard_react/alumni"
               className="text-decoration-none text-dark"
             >
               _ Alumni
@@ -59,7 +59,7 @@ function SideBar() {
           </li>
           <li>
             <a
-              href="http://localhost:5173/advisors"
+              href="http://localhost:5173/aard_react/advisors"
               className="text-decoration-none text-dark"
             >
               _ Advisors
@@ -67,7 +67,7 @@ function SideBar() {
           </li>
           <li>
             <a
-              href="http://localhost:5173/administrators"
+              href="http://localhost:5173/aard_react/administrators"
               className="text-decoration-none text-dark"
             >
               _ Administrators
