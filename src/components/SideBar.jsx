@@ -34,27 +34,42 @@ function SideBar() {
         </h6>
         <ul className="list-unstyled small">
           <li>
-            <a href="#" className="text-decoration-none text-dark">
+            <a
+              href="http://localhost:5173/parents"
+              className="text-decoration-none text-dark"
+            >
               _ Parents
             </a>
           </li>
           <li>
-            <a href="#" className="text-decoration-none text-dark">
+            <a
+              href="http://localhost:5173/students"
+              className="text-decoration-none text-dark"
+            >
               _ Students
             </a>
           </li>
           <li>
-            <a href="#" className="text-decoration-none text-dark">
+            <a
+              href="http://localhost:5173/alumni"
+              className="text-decoration-none text-dark"
+            >
               _ Alumni
             </a>
           </li>
           <li>
-            <a href="#" className="text-decoration-none text-dark">
+            <a
+              href="http://localhost:5173/advisors"
+              className="text-decoration-none text-dark"
+            >
               _ Advisors
             </a>
           </li>
           <li>
-            <a href="#" className="text-decoration-none text-dark">
+            <a
+              href="http://localhost:5173/administrators"
+              className="text-decoration-none text-dark"
+            >
               _ Administrators
             </a>
           </li>

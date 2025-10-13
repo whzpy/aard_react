@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import LanguageSelector from "./LanguageSelector"
 
 function Header() {
@@ -83,7 +84,7 @@ function Header() {
             href="https://innobridgeinstitute.org/contact-us"
             className="text-white text-decoration-none mx-3"
           >
-            GIVE
+            CONTACT
           </a>
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSdb6wYjLXPppUYwx4mDD8Q9l4sIwOXphar1EbMOKzxjIi-I9Q/viewform"
@@ -91,6 +92,9 @@ function Header() {
           >
             NEWS
           </a>
+          <Link to="/give" className="text-white text-decoration-none mx-3">
+            GIVE
+          </Link>
         </nav>
         {/* Right side components */}
         <div
