@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 function SideBar() {
   return (
@@ -34,44 +35,32 @@ function SideBar() {
         </h6>
         <ul className="list-unstyled small">
           <li>
-            <a
-              href="/aard_react/parents"
-              className="text-decoration-none text-dark"
-            >
+            <Link to="/parents" className="text-decoration-none text-dark">
               _ Parents
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/aard_react/students"
-              className="text-decoration-none text-dark"
-            >
+            <Link to="/students" className="text-decoration-none text-dark">
               _ Students
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/aard_react/alumni"
-              className="text-decoration-none text-dark"
-            >
+            <Link to="/alumni" className="text-decoration-none text-dark">
               _ Alumni
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/aard_react/advisors"
-              className="text-decoration-none text-dark"
-            >
+            <Link to="/advisors" className="text-decoration-none text-dark">
               _ Advisors
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/aard_react/administrators"
+            <Link
+              to="/administrators"
               className="text-decoration-none text-dark"
             >
               _ Administrators
-            </a>
+            </Link>
           </li>
         </ul>
 
