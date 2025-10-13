@@ -12,14 +12,15 @@ function App() {
       <div className="d-flex flex-grow-1" style={{ marginTop: "70px" }}>
         {/* Main Content */}
         <main
-          className="flex-grow-1 p-4 bg-light"
+          className="flex-grow-1 p-2 p-md-4 bg-light"
           style={{
-            marginLeft: "200px",
+            marginLeft: "clamp(200px, 20vw, 250px)",
             overflowY: "scroll",
-            height: "calc(100vh - 70px)",
-            width: "calc(100vw - 200px)",
+            height: "calc(100vh)",
+            width: "calc(100vw - clamp(200px, 20vw, 250px))",
             scrollbarWidth: "auto",
             scrollbarColor: "#888 #f1f1f1",
+            minWidth: "300px",
           }}
         >
           <div className="container">
@@ -87,7 +88,7 @@ function App() {
               {" "}
               How have they voted in the past?{" "}
             </h2>
-            <p>
+            <p className="lead text-secondary">
               According to the rules of the Nobel Peace Prize, the Nobel
               Committee receives nominations from members of governments around
               the world, or the International Court of Justice in The Hague and
@@ -115,24 +116,24 @@ function App() {
               Frydnes said when he presented the award.
             </p>
           </div>
+
           <div
             className="fw-bold mb-4"
             style={{
               backgroundColor: "#760e0eff",
-              bottom: "0",
-              left: "250px",
-              right: "0",
-              height: "50px",
+              height: "80px",
               textAlign: "center",
               color: "white",
-              paddingTop: "10px",
+              paddingTop: "12px",
+              marginTop: "2rem",
             }}
           >
             <p>
-              {" "}
-              Welcome to Innobridge Institute _ One Broadway, Cambridge, MA
-              02142 _ Email: info@innobridgeinstitute.org _ Phone: (617)
-              955-1908
+              For more information about Innobridge Institute, click the Inquire
+              button at the top left.
+              <br />
+              Innobridge Institute _address: One Broadway, Cambridge, MA 02142
+              _Email: info@innobridgeinstitute.org _Phone: (617) 955-1908
             </p>
           </div>
         </main>
