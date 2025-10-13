@@ -8,7 +8,7 @@ import "./index.css"
 
 function App() {
   return (
-    <Router>
+    <Router basename="/aard_react">
       <div className="app-container d-flex flex-column vh-100">
         <Header />
         <SideBar />
@@ -42,8 +42,8 @@ function App() {
               }}
             >
               <p>
-                For more information about Innobridge Institute, click the
-                Inquire button at the top left.
+                For more information about Innobridge Institute, click the Inquire
+                button at the top left.
                 <br />
                 Innobridge Institute _address: One Broadway, Cambridge, MA 02142
                 _Email: info@innobridgeinstitute.org _Phone: (617) 955-1908

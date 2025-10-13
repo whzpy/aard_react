@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://whzpy.github.io/innobridge-website",
+  "homepage": "https://whzpy.github.io/aard_react",
   "type": "module",
   "scripts": {
     "dev": "vite",
