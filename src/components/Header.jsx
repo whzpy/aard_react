@@ -18,10 +18,10 @@ function Header() {
     >
       <div className="container d-flex align-items-left justify-content-center">
         {/* Logo */}
-        <a href="http://localhost:5173/" className="me-4">
+        <a href="https://www.ardacademy.org/" className="me-4">
           <img
-            src="/aard_logo.png"
-            alt="ARRD Logo"
+            src="/aard_react/aard_logo.png"
+            alt="AARD - Home"
             style={{
               height: "46px",
               position: "absolute",
