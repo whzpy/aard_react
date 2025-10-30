@@ -15,6 +15,8 @@ import Students from "../pages/Students"
 import Alumni from "../pages/Alumni"
 import Advisors from "../pages/Advisors"
 import Administrators from "../pages/Administrators"
+import AdminSearch from "../assets/AdminSearch"
+import AdminModal from "../assets/AdminModal"
 // import Inquire from "../components/Inquire"
 // import Login from "../auth/Login"
 
@@ -38,7 +40,41 @@ function AppRoutes() {
       <Route path="/students" element={<Students />} />
       <Route path="/alumni" element={<Alumni />} />
       <Route path="/advisors" element={<Advisors />} />
-      <Route path="/administrators" element={<Administrators />} />
+      <Route
+        path="/administrators"
+        element={
+          <div style={{ marginTop: "15px" }}>
+            <h2 style={{ marginBottom: "5px" }}>
+              Recipe List with CRUD and other functionalites __{" "}
+              {new Date().toLocaleDateString()}{" "}
+            </h2>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <AdminSearch searchHandler={searchHandler} />
+              <Button
+                variant="success"
+                style={{ marginTop: "10px" }}
+                onClick={() => addHandler()}
+              >
+                Add New Recipe
+              </Button>
+            </div>
+            <AdminModal
+              show={show}
+              handleClose={handleClose}
+              addNewRecipeHandler={addNewRecipeHandler}
+            />
+            <Administrators
+              rows={rows}
+              handleSort={handleSort}
+              sortConfig={sortConfig}
+              detailHandler={detailHandler}
+              editHandler={editHandler}
+              deleteHandler={deleteHandler}
+              itemsPerPage={itemsPerPage}
+            />
+          </div>
+        }
+      />
     </Routes>
   )
 }

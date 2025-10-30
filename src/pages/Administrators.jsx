@@ -1,51 +1,216 @@
-import React from "react"
+import React, { useState } from "react"
+import { Button, Table } from "react-bootstrap"
+import { Tooltip } from "react-tooltip"
 
-function Administrators() {
+const Administrators = ({
+  rows,
+  handleSort,
+  sortConfig,
+  detailHandler,
+  editHandler,
+  deleteHandler,
+  itemsPerPage,
+}) => {
+  const [currentPage, setCurrentPage] = useState(1)
+  // Calculate total pages
+  const totalPages = Math.ceil(rows.length / itemsPerPage)
+
+  // Get current page items
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentItems = rows.slice(indexOfFirstItem, indexOfLastItem)
+
+  // Handle page change
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
+
+  // Render pagination
+  const renderPagination = () => {
+    let pages = []
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(
+        <li
+          key={i}
+          className={`page-item ${currentPage === i ? "active" : ""}`}
+        >
+          <button className="page-link" onClick={() => handlePageChange(i)}>
+            {i}
+          </button>
+        </li>
+      )
+    }
+    return (
+      <ul className="pagination justify-content-center">
+        <li className="page-item">
+          <button
+            className="page-link"
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+        </li>
+        {pages}
+        <li className="page-item">
+          <button
+            className="page-link"
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </li>
+      </ul>
+    )
+  }
+
   return (
     <div>
-      <h1 className="fw-bold mb-4 text-dark">Administrators</h1>
-      <p className="lead text-secondary">
-        Welcome to the Administrators page! This is a simple "Hello World"
-        component. What we know TRUMP LEAVES EGYPT: President Donald Trump has
-        left Egypt after a whirlwind Middle East trip which included the signing
-        of the peace deal to end the war in Gaza and addressing Israel's
-        parliament, the Knesset. HOSTAGES TRANSFERRED: All 20 of the surviving
-        hostages in Gaza have now been released. TO BE RELEASED: While the
-        remains of other hostages were also expected to be transferred, the
-        group representing families of abductees announced that "only four
-        bodies" out of 28 held by Hamas would be heading back today. PALESTINIAN
-        PRISONERS: Hamas had pledged to release the hostages by today in
-        exchange for 250 prisoners serving life sentences and more than 1,700
-        Palestinians detained after the group’s Oct. 7, 2023, terrorist attack
-        on Israel. WORLD LEADERS GATHER: Aside from Trump, Egyptian President
-        Abdel Fattah el-Sissi, British Prime Minister Keir Starmer, German
-        Chancellor Friedrich Merz and Canadian Prime Minister Mark Carney are
-        among 20 heads of state attending today’s summit in Egypt. SCALE OF WAR:
-        More than 67,000 people have been killed in Israel’s offensive on Gaza,
-        according to the Gaza Health Ministry. Large swaths of the enclave have
-        been destroyed, and famine has been declared in part of northern Gaza.
-        Around 1,200 people were killed and about 250 were taken hostage in the
-        Oct. 7 attack on Israel. What we know TRUMP LEAVES EGYPT: President
-        Donald Trump has left Egypt after a whirlwind Middle East trip which
-        included the signing of the peace deal to end the war in Gaza and
-        addressing Israel's parliament, the Knesset. HOSTAGES TRANSFERRED: All
-        20 of the surviving hostages in Gaza have now been released. TO BE
-        RELEASED: While the remains of other hostages were also expected to be
-        transferred, the group representing families of abductees announced that
-        "only four bodies" out of 28 held by Hamas would be heading back today.
-        PALESTINIAN PRISONERS: Hamas had pledged to release the hostages by
-        today in exchange for 250 prisoners serving life sentences and more than
-        1,700 Palestinians detained after the group’s Oct. 7, 2023, terrorist
-        attack on Israel. WORLD LEADERS GATHER: Aside from Trump, Egyptian
-        President Abdel Fattah el-Sissi, British Prime Minister Keir Starmer,
-        German Chancellor Friedrich Merz and Canadian Prime Minister Mark Carney
-        are among 20 heads of state attending today’s summit in Egypt. SCALE OF
-        WAR: More than 67,000 people have been killed in Israel’s offensive on
-        Gaza, according to the Gaza Health Ministry. Large swaths of the enclave
-        have been destroyed, and famine has been declared in part of northern
-        Gaza. Around 1,200 people were killed and about 250 were taken hostage
-        in the Oct. 7 attack on Israel.
-      </p>
+      <Table className="table table-striped" style={{ width: "100%" }}>
+        <thead>
+          <tr>
+            <th>
+              <Button variant="link" onClick={() => handleSort("id")}>
+                ID{" "}
+                {sortConfig.key === "id"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th style={{ width: "400px" }}>
+              <Button variant="link" onClick={() => handleSort("name")}>
+                Name{" "}
+                {sortConfig.key === "name"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th>
+              <Button
+                variant="link"
+                onClick={() => handleSort("prepTimeMinutes")}
+              >
+                prepTimeMinutes{" "}
+                {sortConfig.key === "prepTimeMinutes"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th>
+              <Button
+                variant="link"
+                onClick={() => handleSort("cookTimeMinutes")}
+              >
+                cookTimeMinutes{" "}
+                {sortConfig.key === "cookTimeMinutes"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th>
+              <Button variant="link" onClick={() => handleSort("servings")}>
+                Servings{" "}
+                {sortConfig.key === "servings"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th>
+              <Button variant="link" onClick={() => handleSort("difficulty")}>
+                Difficulty{" "}
+                {sortConfig.key === "difficulty"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th>
+              <Button variant="link" onClick={() => handleSort("cuisine")}>
+                Cuisine{" "}
+                {sortConfig.key === "cuisine"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th>
+              <Button variant="link" onClick={() => handleSort("rating")}>
+                Rating{" "}
+                {sortConfig.key === "rating"
+                  ? sortConfig.direction === "asc"
+                    ? "↑"
+                    : "↓"
+                  : ""}
+              </Button>
+            </th>
+            <th> Details</th>
+            <th> Edit</th>
+            <th> Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {currentItems.map((row) => (
+            <tr key={row.id}>
+              <td>{row.id}</td>
+              <td>{row.name}</td>
+              <td>{row.prepTimeMinutes}</td>
+              <td>{row.cookTimeMinutes}</td>
+              <td>{row.servings}</td>
+              <td>{row.difficulty}</td>
+              <td>{row.cuisine}</td>
+              <td>{row.rating}</td>
+              <td>
+                <Button
+                  type="button"
+                  data-tooltip-id="moreTooltip"
+                  variant="outline-secondary"
+                  onClick={() => detailHandler(row.id)}
+                >
+                  More...
+                </Button>
+                <Tooltip
+                  id="moreTooltip"
+                  content="extra information"
+                  place="bottom"
+                  effect="solid"
+                />
+              </td>
+              <td>
+                <Button
+                  type="button"
+                  variant="outline-primary"
+                  onClick={() => editHandler(row.id)}
+                >
+                  Edit
+                </Button>
+              </td>
+              <td>
+                <Button
+                  type="button"
+                  variant="outline-danger"
+                  onClick={() => deleteHandler(row.id)}
+                >
+                  Delete
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      {totalPages > 1 && renderPagination()}
     </div>
   )
 }
