@@ -51,7 +51,7 @@ function Header() {
         {/* Navigation links */}
         <nav className="d-none d-md-flex">
           <a
-            href="https://innobridgeinstitute.org/about"
+            href="https://innobridgeinstitute.org/about-us"
             className="text-white text-decoration-none mx-3"
           >
             ABOUT
