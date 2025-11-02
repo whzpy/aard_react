@@ -3,7 +3,7 @@ import { Button, Table, Modal, Form, Alert, Badge, Card } from "react-bootstrap"
 import { Tooltip } from "react-tooltip"
 
 function AdminPage() {
-  // Sample recipe data
+  // Sample Aard data
   const [rows, setRows] = useState([])
 
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" })
@@ -108,9 +108,9 @@ function AdminPage() {
   }
 
   // Modal handlers
-  const handleShowModal = (mode, recipe = null) => {
+  const handleShowModal = (mode, Aard = null) => {
     setModalMode(mode)
-    setSelectedRecipe(recipe)
+    setSelectedRecipe(Aard)
     if (mode === "add") {
       setFormData({
         name: "",
@@ -125,19 +125,19 @@ function AdminPage() {
         image: "",
         tags: "",
       })
-    } else if (mode === "edit" && recipe) {
+    } else if (mode === "edit" && Aard) {
       setFormData({
-        name: recipe.name,
-        prepTimeMinutes: recipe.prepTimeMinutes,
-        cookTimeMinutes: recipe.cookTimeMinutes,
-        servings: recipe.servings,
-        difficulty: recipe.difficulty,
-        cuisine: recipe.cuisine,
-        rating: recipe.rating,
-        ingredients: recipe.ingredients.join(", "),
-        instructions: recipe.instructions,
-        image: recipe.image,
-        tags: recipe.tags.join(", "),
+        name: Aard.name,
+        prepTimeMinutes: Aard.prepTimeMinutes,
+        cookTimeMinutes: Aard.cookTimeMinutes,
+        servings: Aard.servings,
+        difficulty: Aard.difficulty,
+        cuisine: Aard.cuisine,
+        rating: Aard.rating,
+        ingredients: Aard.ingredients.join(", "),
+        instructions: Aard.instructions,
+        image: Aard.image,
+        tags: Aard.tags.join(", "),
       })
     }
     setShowModal(true)
@@ -177,12 +177,12 @@ function AdminPage() {
 
     if (modalMode === "add") {
       setRows((prev) => [...prev, newRecipe])
-      showAlertMessage("Recipe added successfully!")
+      showAlertMessage("Aard added successfully!")
     } else if (modalMode === "edit") {
       setRows((prev) =>
         prev.map((row) => (row.id === selectedRecipe.id ? newRecipe : row))
       )
-      showAlertMessage("Recipe updated successfully!")
+      showAlertMessage("Aard updated successfully!")
     }
 
     handleCloseModal()
@@ -197,19 +197,19 @@ function AdminPage() {
   }
 
   const detailHandler = (id) => {
-    const recipe = rows.find((row) => row.id === id)
-    handleShowModal("view", recipe)
+    const Aard = rows.find((row) => row.id === id)
+    handleShowModal("view", Aard)
   }
 
   const editHandler = (id) => {
-    const recipe = rows.find((row) => row.id === id)
-    handleShowModal("edit", recipe)
+    const Aard = rows.find((row) => row.id === id)
+    handleShowModal("edit", Aard)
   }
 
   const deleteHandler = (id) => {
-    if (window.confirm("Are you sure you want to delete this recipe?")) {
+    if (window.confirm("Are you sure you want to delete this Aard?")) {
       setRows((prev) => prev.filter((row) => row.id !== id))
-      showAlertMessage("Recipe deleted successfully!", "warning")
+      showAlertMessage("Aard deleted successfully!", "warning")
     }
   }
 
@@ -271,7 +271,7 @@ function AdminPage() {
       )}
 
       <h2 style={{ marginBottom: "20px" }}>
-        Recipe List with CRUD and other functionalities __{" "}
+        Aard List with CRUD and other functionalities __{" "}
         {new Date().toLocaleDateString()}
       </h2>
 
@@ -314,7 +314,7 @@ function AdminPage() {
         <div className="col-md-4 text-end">
           <Button variant="success" onClick={() => handleShowModal("add")}>
             <i className="bi bi-plus-circle me-2"></i>
-            Add New Recipe
+            Add New Aard
           </Button>
         </div>
       </div>
@@ -342,8 +342,7 @@ function AdminPage() {
             <Card.Body>
               <h5>
                 {(
-                  rows.reduce((sum, recipe) => sum + recipe.rating, 0) /
-                  rows.length
+                  rows.reduce((sum, Aard) => sum + Aard.rating, 0) / rows.length
                 ).toFixed(1)}
               </h5>
               <small className="text-muted">Avg Rating</small>
@@ -360,7 +359,7 @@ function AdminPage() {
         </div>
       </div>
 
-      {/* Recipe Table */}
+      {/* Aard Table */}
       <div className="table-responsive">
         <Table
           className="table table-striped table-hover"
@@ -388,7 +387,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("name")}
                 >
-                  Recipe Name{" "}
+                  Aard Name{" "}
                   {sortConfig.key === "name"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -571,14 +570,10 @@ function AdminPage() {
                       content="View details"
                       place="top"
                     />
-                    <Tooltip
-                      id="editTooltip"
-                      content="Edit recipe"
-                      place="top"
-                    />
+                    <Tooltip id="editTooltip" content="Edit Aard" place="top" />
                     <Tooltip
                       id="deleteTooltip"
-                      content="Delete recipe"
+                      content="Delete Aard"
                       place="top"
                     />
                   </td>
@@ -642,13 +637,13 @@ function AdminPage() {
         </div>
       )}
 
-      {/* Recipe Modal */}
+      {/* Aard Modal */}
       <Modal show={showModal} onHide={handleCloseModal} size="lg">
         <Modal.Header closeButton>
           <Modal.Title>
-            {modalMode === "add" && "Add New Recipe"}
-            {modalMode === "edit" && "Edit Recipe"}
-            {modalMode === "view" && "Recipe Details"}
+            {modalMode === "add" && "Add New Aard"}
+            {modalMode === "edit" && "Edit Aard"}
+            {modalMode === "view" && "Aard Details"}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -729,7 +724,7 @@ function AdminPage() {
               <div className="row">
                 <div className="col-md-6">
                   <Form.Group className="mb-3">
-                    <Form.Label>Recipe Name *</Form.Label>
+                    <Form.Label>Aard Name *</Form.Label>
                     <Form.Control
                       type="text"
                       name="name"
@@ -864,7 +859,7 @@ function AdminPage() {
                   Cancel
                 </Button>
                 <Button variant="primary" type="submit">
-                  {modalMode === "add" ? "Add Recipe" : "Update Recipe"}
+                  {modalMode === "add" ? "Add Aard" : "Update Aard"}
                 </Button>
               </div>
             </Form>
