@@ -271,7 +271,7 @@ function AdminPage() {
       )}
 
       <h2 style={{ marginBottom: "20px" }}>
-        Aard List with CRUD and other functionalities __{" "}
+        AARD Internal User Management Portal __{" "}
         {new Date().toLocaleDateString()}
       </h2>
 
@@ -314,7 +314,7 @@ function AdminPage() {
         <div className="col-md-4 text-end">
           <Button variant="success" onClick={() => handleShowModal("add")}>
             <i className="bi bi-plus-circle me-2"></i>
-            Add New Aard
+            Add New User
           </Button>
         </div>
       </div>
@@ -387,7 +387,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("name")}
                 >
-                  Aard Name{" "}
+                  Name{" "}
                   {sortConfig.key === "name"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -401,7 +401,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("prepTimeMinutes")}
                 >
-                  Prep Time{" "}
+                  EnrollDate{" "}
                   {sortConfig.key === "prepTimeMinutes"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -415,7 +415,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("cookTimeMinutes")}
                 >
-                  Cook Time{" "}
+                  GraduateDate{" "}
                   {sortConfig.key === "cookTimeMinutes"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -429,7 +429,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("servings")}
                 >
-                  Servings{" "}
+                  School{" "}
                   {sortConfig.key === "servings"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -443,7 +443,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("difficulty")}
                 >
-                  Difficulty{" "}
+                  College{" "}
                   {sortConfig.key === "difficulty"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -457,7 +457,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("cuisine")}
                 >
-                  Cuisine{" "}
+                  PhoneNum{" "}
                   {sortConfig.key === "cuisine"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -471,7 +471,7 @@ function AdminPage() {
                   className="text-white p-0"
                   onClick={() => handleSort("rating")}
                 >
-                  Rating{" "}
+                  EmailAddress{" "}
                   {sortConfig.key === "rating"
                     ? sortConfig.direction === "asc"
                       ? "↑"
@@ -479,14 +479,16 @@ function AdminPage() {
                     : ""}
                 </Button>
               </th>
-              <th>Tags</th>
-              <th style={{ minWidth: "200px" }}>Actions</th>
+              <th>Status</th>
+              <th>Details</th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
             {currentItems.length === 0 ? (
               <tr>
-                <td colSpan="10" className="text-center py-4">
+                <td colSpan="12" className="text-center py-4">
                   <i className="bi bi-inbox fs-1 text-muted d-block mb-2"></i>
                   No recipes found matching your criteria
                 </td>
@@ -538,44 +540,32 @@ function AdminPage() {
                       )}
                     </div>
                   </td>
-                  <td>
-                    <div className="btn-group" role="group">
-                      <Button
-                        size="sm"
-                        variant="outline-info"
-                        onClick={() => detailHandler(row.id)}
-                        data-tooltip-id="viewTooltip"
-                      >
-                        <i className="bi bi-eye"></i>
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline-primary"
-                        onClick={() => editHandler(row.id)}
-                        data-tooltip-id="editTooltip"
-                      >
-                        <i className="bi bi-pencil"></i>
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline-danger"
-                        onClick={() => deleteHandler(row.id)}
-                        data-tooltip-id="deleteTooltip"
-                      >
-                        <i className="bi bi-trash"></i>
-                      </Button>
-                    </div>
-                    <Tooltip
-                      id="viewTooltip"
-                      content="View details"
-                      place="top"
-                    />
-                    <Tooltip id="editTooltip" content="Edit Aard" place="top" />
-                    <Tooltip
-                      id="deleteTooltip"
-                      content="Delete Aard"
-                      place="top"
-                    />
+                  <td className="text-center">
+                    <Button
+                      variant="outline-info"
+                      onClick={() => detailHandler(row.id)}
+                      data-tooltip-id="viewTooltip"
+                    >
+                      More...
+                    </Button>
+                  </td>
+                  <td className="text-center">
+                    <Button
+                      variant="outline-primary"
+                      onClick={() => editHandler(row.id)}
+                      data-tooltip-id="editTooltip"
+                    >
+                      Edit
+                    </Button>
+                  </td>
+                  <td className="text-center">
+                    <Button
+                      variant="outline-danger"
+                      onClick={() => deleteHandler(row.id)}
+                      data-tooltip-id="deleteTooltip"
+                    >
+                      Delete
+                    </Button>
                   </td>
                 </tr>
               ))
@@ -641,7 +631,7 @@ function AdminPage() {
       <Modal show={showModal} onHide={handleCloseModal} size="lg">
         <Modal.Header closeButton>
           <Modal.Title>
-            {modalMode === "add" && "Add New Aard"}
+            {modalMode === "add" && "Add New User"}
             {modalMode === "edit" && "Edit Aard"}
             {modalMode === "view" && "Aard Details"}
           </Modal.Title>
@@ -866,6 +856,11 @@ function AdminPage() {
           )}
         </Modal.Body>
       </Modal>
+
+      {/* Tooltips - placed outside table for better performance */}
+      <Tooltip id="viewTooltip" content="View details" place="top" />
+      <Tooltip id="editTooltip" content="Edit Aard" place="top" />
+      <Tooltip id="deleteTooltip" content="Delete Aard" place="top" />
     </div>
   )
 }
